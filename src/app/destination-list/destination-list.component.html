@@ -1,12 +1,13 @@
 <button (click)="getApiDestinations()">Destinations</button>
 
-<div  *ngFor="let destination of destinations">
-  <h2>{{destination.name}}</h2>
-  <!-- <div class="hidebutneed">
-    <h3>ID: {{camp.$.facilityID}}</h3>
-    <h3>Code: {{camp.$.contractID}}</h3>
-    <h3>Lat: {{camp.$.latitude}}</h3>
-    <h3>Lng: {{camp.$.longitude}}</h3>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngFor="let destination of destinations">
+      <h2 (click)="getDestinationDetail(destination.id)">{{destination.name}}</h2>
+    </div>
   </div>
-  <hr> -->
+
+  <div class="col-md-6">
+
+  </div>
 </div>

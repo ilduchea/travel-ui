@@ -24,4 +24,8 @@ export class DestinationListComponent implements OnInit {
     });
   }
 
+  getDestinationDetail(id) {
+    console.log('id: ', id);
+  }
+
 }

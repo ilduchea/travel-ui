@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { DestinationListComponent } from './destination-list/destination-list.component';
+
 const routes: Routes = [
   {
     path: '',
-    children: []
+    children: [],
+    component: DestinationListComponent
   }
 ];
 

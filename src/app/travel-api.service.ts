@@ -14,5 +14,8 @@ export class TravelApiService {
   getDestinations() {
     return this.http.get(`http://localhost:3000/v1/destinations?api_key=${travelConfig.apiKey}`)
   }
+  deleteDestination(id) {
+    return this.http.delete(`http://localhost:3000/v1/destinations/${id}?api_key=${travelConfig.apiKey}`)
+  }
 
 }

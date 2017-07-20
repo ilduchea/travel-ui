@@ -2,12 +2,13 @@
 
 <div class="row">
   <div class="col-md-6">
-    <div *ngFor="let destination of destinations">
-      <h2 (click)="getDestinationDetail(destination.id)">{{destination.name}}</h2>
+    <div *ngFor="let destination of destinations; let i =index" id="destination{{i}}">
+      <h2 (click)="getDestinationDetail(i)">{{destination.name}}</h2>
+      <button (click)="deleteDestination(destination.id, i)">Delete</button>
     </div>
   </div>
 
-  <div class="col-md-6">
-
+  <div class="col-md-6" id="destination-detail">
+    <!-- <app-destination-detail [listDestination]="destinationDetail"></app-destination-detail> -->
   </div>
 </div>
